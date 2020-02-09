@@ -47,6 +47,7 @@ import java.util.Locale;
  * - Lookup of default dialog icons with magic constants<br>
  *
  *  Changelog:
+ *  09.02.2020 - removed unneeded exception handling
  *  08.02.2020 - initial version
  */
 public class QuickCap implements Runnable {
@@ -76,11 +77,7 @@ public class QuickCap implements Runnable {
     // this window serves as the selection preview
     private JFrame previewFrame;
 
-    // this exception
-    public QuickCap() throws ParseException {
-    }
-
-    public static void main(String...args) throws ParseException {
+    public static void main(String...args) {
         SwingUtilities.invokeLater(new QuickCap());
     }
 
